@@ -30,6 +30,10 @@ If the result is high risk, the system automatically alerts the right person by 
 7. SNS emails the migration architect
 8. Low and medium risk results are stored silently — no one is paged
 
+## Use Case 
+
+![Architecture Diagram](pipeline-diagram.png)
+
 
 ## Security controls
 
