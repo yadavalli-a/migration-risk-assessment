@@ -18,7 +18,7 @@ If the result is high risk, the system automatically alerts the right person by 
 
 ## Architecture
 
-![Architecture Diagram](architecture-diagram.png)
+![Architecture Diagram](SystemArchitecture.png)
 
 **Flow:**
 1. A request is sent in with the answers to the 8 questions (for initial testing we used Postman tool, later developed a portal)
@@ -30,9 +30,6 @@ If the result is high risk, the system automatically alerts the right person by 
 7. SNS emails the migration architect
 8. Low and medium risk results are stored silently — no one is paged
 
-## Use case
-
-![Use Case Diagram](use-case-diagram.png)
 
 ## Security controls
 
