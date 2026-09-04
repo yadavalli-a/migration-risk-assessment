@@ -82,7 +82,7 @@ Each of the 8 questions is answered A, B, or C:
 | Q05 | How heavily are special Oracle features used? | None or minimal | Some LOBs or materialized views | Heavy LOBs, Spatial, or advanced features |
 | Q06 | How many external dependencies exist? | Few and documented | Several but documented | Many or undocumented |
 | Q07 | What is the sensitive-data status? | No sensitive data | Sensitive data is encrypted; PII | Sensitive data is not encrypted |
-| Q08 | How ready is the proposed AWS target? | Selected and tested | Selected but not tested | Selected but not tested |
+| Q08 | How ready is the proposed AWS target? | Selected and tested | Selected but not tested | Target not selected |
 
 `readinessScore = 100 - (sum of all risk points)`
 
