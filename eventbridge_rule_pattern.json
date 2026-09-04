@@ -1,0 +1,12 @@
+{
+  "source": ["aws.s3"],
+  "detail-type": ["Object Created"],
+  "detail": {
+    "bucket": {
+      "name": ["REPLACE_WITH_YOUR_BUCKET_NAME"]
+    },
+    "object": {
+      "key": [{ "prefix": "high-risk/" }]
+    }
+  }
+}

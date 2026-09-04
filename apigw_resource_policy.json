@@ -1,0 +1,33 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowFromDbaTeamIpRangeOnly",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "execute-api:Invoke",
+      "Resource": "arn:aws:execute-api:REGION:ACCOUNT_ID:API_ID/*/*/*",
+      "Condition": {
+        "IpAddress": {
+          "aws:SourceIp": [
+            "203.0.113.0/24"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "DenyEverythingElse",
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "execute-api:Invoke",
+      "Resource": "arn:aws:execute-api:REGION:ACCOUNT_ID:API_ID/*/*/*",
+      "Condition": {
+        "NotIpAddress": {
+          "aws:SourceIp": [
+            "203.0.113.0/24"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "WriteReportsToThisBucketOnly",
+      "Effect": "Allow",
+      "Action": "s3:PutObject",
+      "Resource": [
+        "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME/low-risk/*",
+        "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME/medium-risk/*",
+        "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME/high-risk/*"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "s3:x-amz-server-side-encryption": "AES256"
+        }
+      }
+    },
+    {
+      "Sid": "WriteLogsForThisFunctionOnly",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:*:*:log-group:/aws/lambda/migration-readiness-evaluator*"
+    },
+    {
+      "Sid": "AllowXRayTracing",
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
