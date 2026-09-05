@@ -3,7 +3,7 @@
   "detail-type": ["Object Created"],
   "detail": {
     "bucket": {
-      "name": ["REPLACE_WITH_YOUR_BUCKET_NAME"]
+      "name": ["oracle-migration-risk-reports"]
     },
     "object": {
       "key": [{ "prefix": "high-risk/" }]
