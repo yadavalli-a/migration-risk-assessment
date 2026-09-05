@@ -6,9 +6,9 @@
       "Effect": "Allow",
       "Action": "s3:PutObject",
       "Resource": [
-        "arn:aws:s3:::us-east2:646128795/low-risk/*",
-        "arn:aws:s3:::us-east2:646128795/medium-risk/*",
-        "arn:aws:s3:::us-east2:646128795/high-risk/*"
+        "arn:aws:s3:::oracle-migration-risk-reports/low-risk/*",
+        "arn:aws:s3:::oracle-migration-risk-reports/medium-risk/*",
+        "arn:aws:s3:::oracle-migration-risk-reports/high-risk/*"
       ],
       "Condition": {
         "StringEquals": {
