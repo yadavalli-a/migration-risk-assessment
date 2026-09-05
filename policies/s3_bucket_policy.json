@@ -7,8 +7,8 @@
       "Principal": "*",
       "Action": "s3:*",
       "Resource": [
-        "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME",
-        "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME/*"
+        "arn:aws:s3:::oracle-migration-risk-reports",
+        "arn:aws:s3:::oracle-migration-risk-reports/*"
       ],
       "Condition": {
         "Bool": { "aws:SecureTransport": "false" }
@@ -19,7 +19,7 @@
       "Effect": "Deny",
       "Principal": "*",
       "Action": "s3:PutObject",
-      "Resource": "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME/*",
+      "Resource": "arn:aws:s3:::oracle-migration-risk-reports/*",
       "Condition": {
         "StringNotEquals": {
           "s3:x-amz-server-side-encryption": "AES256"
