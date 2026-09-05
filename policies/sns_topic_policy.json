@@ -6,10 +6,10 @@
       "Effect": "Allow",
       "Principal": { "Service": "events.amazonaws.com" },
       "Action": "sns:Publish",
-      "Resource": "arn:aws:sns:REGION:ACCOUNT_ID:migration-alerts",
+      "Resource": "arn:aws:sns:us-east2:646128795:migration-alerts",
       "Condition": {
         "ArnEquals": {
-          "aws:SourceArn": "arn:aws:events:REGION:ACCOUNT_ID:rule/high-risk-migration-alert"
+          "aws:SourceArn": "arn:aws:events:us-east2:646128795:rule/high-risk-migration-alert"
         }
       }
     }
