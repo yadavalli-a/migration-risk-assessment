@@ -6,9 +6,9 @@
       "Effect": "Allow",
       "Action": "s3:PutObject",
       "Resource": [
-        "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME/low-risk/*",
-        "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME/medium-risk/*",
-        "arn:aws:s3:::REPLACE_WITH_YOUR_BUCKET_NAME/high-risk/*"
+        "arn:aws:s3:::us-east2:646128795/low-risk/*",
+        "arn:aws:s3:::us-east2:646128795/medium-risk/*",
+        "arn:aws:s3:::us-east2:646128795/high-risk/*"
       ],
       "Condition": {
         "StringEquals": {
